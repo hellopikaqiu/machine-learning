@@ -121,12 +121,11 @@ def test_with_real(data,test_filename):
 
 def main():
 	filename="preprocessed_kddcup_data"
-	path="/home/frkn/Desktop/applied_ml/kddcup/new/"
-	data = pd.read_csv(path+filename)
+	data = pd.read_csv(filename)
 
-	#with_full_features(data)
-	#with_feature_selection(data)
-	test_with_real(data,"preprocessed_attack")
+	with_full_features(data)
+	with_feature_selection(data)
+	#test_with_real(data,"preprocessed_dos")
 
 
 main()
